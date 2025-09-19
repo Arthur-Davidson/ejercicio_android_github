@@ -11,6 +11,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
+
+// Referencia: https://www.youtube.com/watch?v=t-XbDgXvNhI Minuto: 1:09
 
 @Composable
 fun Pantalla2(siguientePantalla: () -> Unit) {
@@ -35,7 +39,7 @@ fun Pantalla2(siguientePantalla: () -> Unit) {
 
         val buttonShape = RoundedCornerShape(8.dp) // Bordes mas cuadrados
 
-        // Botones
+        //Boton 1: Islas
         Button(
             onClick = {
                 siguientePantalla()
@@ -46,10 +50,12 @@ fun Pantalla2(siguientePantalla: () -> Unit) {
             shape = buttonShape
         ) {
             Text("Islas de Operaciones",
-                fontWeight = FontWeight.Bold)
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp)
         }
 
         Spacer(modifier = Modifier.height(16.dp))
+        //Boton 2: Finanzas
 
         Button(
             onClick = {
@@ -61,10 +67,12 @@ fun Pantalla2(siguientePantalla: () -> Unit) {
             shape = buttonShape
         ) {
             Text("Finanzas",
-                fontWeight = FontWeight.Bold)
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp)
         }
 
         Spacer(modifier = Modifier.height(16.dp))
+        //Boton 3: Omnidroides
 
         Button(
             onClick = {
@@ -76,11 +84,12 @@ fun Pantalla2(siguientePantalla: () -> Unit) {
             shape = buttonShape
         ) {
             Text("Meta-entrenamiento de omnidroides",
-                fontWeight = FontWeight.Bold)
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp)
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-
+        //Boton 4: Heroes
         Button(
             onClick = {
                 siguientePantalla()
@@ -91,7 +100,14 @@ fun Pantalla2(siguientePantalla: () -> Unit) {
             shape = buttonShape
         ) {
             Text("Heroes",
-                fontWeight = FontWeight.Bold)
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp)
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun Pantalla2Preview() {
+    Pantalla2(siguientePantalla = {})
 }

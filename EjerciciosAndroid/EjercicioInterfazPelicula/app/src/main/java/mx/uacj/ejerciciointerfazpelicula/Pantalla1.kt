@@ -8,9 +8,15 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
+// Referencia: https://www.youtube.com/watch?v=t-XbDgXvNhI Minuto: 0:45
 
 @Composable
 //Trasladarse a otra pantalla
@@ -29,13 +35,23 @@ fun Pantalla1(siguientePantalla: () -> Unit) {
         OutlinedTextField(
             value = text,
             onValueChange = { text = it },
-            label = { Text("Contraseña") },
+            colors = TextFieldDefaults.colors(
+                // Usa tus colores definidos en colors.xml
+                focusedContainerColor = Color(0xFFB0BEC5), // Color cuando el campo tiene foco
+                unfocusedContainerColor = Color(0xFFE6FCFC),),
+            label = {
+                Text("Contraseña",
+                    modifier = Modifier.fillMaxWidth(), // Para centrar el label
+                    textAlign = TextAlign.Center,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp
+                )
+                    },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp)
-                .background(Color(0xFFE6FCFC)) // Fondo del TextField
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(50.dp))
 
         // Boton para navegar a la siguiente pantalla como si ingresara con una contraseña
         Button(
@@ -51,9 +67,17 @@ fun Pantalla1(siguientePantalla: () -> Unit) {
                 .fillMaxWidth()
                 .height(56.dp)
         ) {
-            Text("Ingresar")
+            Text("Ingresar",
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp)
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun Pantalla1Preview() {
+    Pantalla1(siguientePantalla = {})
 }
 
 
