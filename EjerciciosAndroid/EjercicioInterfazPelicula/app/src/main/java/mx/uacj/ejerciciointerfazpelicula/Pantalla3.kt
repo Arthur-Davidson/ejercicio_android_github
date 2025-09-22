@@ -1,6 +1,7 @@
 package mx.uacj.ejerciciointerfazpelicula
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -21,7 +22,7 @@ fun Pantalla3() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF6DF7EC)) // Fondo de la pantalla
+            .background(Color(0xFF000000)) // Fondo de la pantalla
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -31,13 +32,14 @@ fun Pantalla3() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
-                .background(Color(0xFFE6FCFC)) // Fondo del recuadro
+                .border(3.dp, Color(0xFF118C1B))
+                .background(Color(0xFF)) // Fondo del recuadro
                 .padding(8.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
             Text(
                 text = "Oponente:",
-                color = Color.Black,
+                color = Color(0xFF36A73F),
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp
@@ -48,12 +50,13 @@ fun Pantalla3() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(40.dp)
-                .background(Color(0xFF357070)) // Fondo del recuadro
+                .border(3.dp, Color(0xFF118C1B))
+                .background(Color(0xFF118C1B)) // Fondo del recuadro
                 .padding(8.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
             Text(
-                text = "Universal Man",
+                text = "Reina Xenomorfo",
                 color = Color.White,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold
@@ -63,13 +66,29 @@ fun Pantalla3() {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp)
-                .background(Color(0xFF357070)) // Fondo del recuadro
+                .border(3.dp, Color(0xFF00730A))
+                .background(Color(0xFF00730A)) // Fondo del recuadro
                 .padding(8.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
             Text(
-                text = "Poderes: Manipulacion de densidad atomica",
+                text = "Habilidades: Mide 9 MTS, escupe acido, tiene 4 brazos, controla Xenomorfos",
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp
+            )
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .border(3.dp, Color(0xFF00730A))
+                .background(Color(0xFF00730A)) // Fondo del recuadro
+                .padding(8.dp),
+            contentAlignment = Alignment.TopCenter,
+        ) {
+            Text(
+                text = "Estado: Se la tasajearon y la hicieron caldo y botas",
                 color = Color.White,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold,
@@ -84,13 +103,14 @@ fun Pantalla3() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
-                .background(Color(0xFFE6FCFC)) // Fondo del recuadro
+                .border(3.dp, Color(0xFF118C1B))
+                .background(Color(0xFF)) // Fondo del recuadro
                 .padding(8.dp),
             contentAlignment = Alignment.TopCenter
         ) {
             Text(
-                text = "Prototipo:",
-                color = Color.Black,
+                text = "Contramedida:",
+                color = Color(0xFF36A73F),
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp
@@ -101,12 +121,13 @@ fun Pantalla3() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(40.dp)
-                .background(Color(0xFF357070)) // Fondo del recuadro
+                .border(3.dp, Color(0xFF118C1B))
+                .background(Color(0xFF118C1B)) // Fondo del recuadro
                 .padding(8.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
             Text(
-                text = "Omnidroide v. X1",
+                text = "Space Marines",
                 color = Color.White,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold
@@ -116,18 +137,38 @@ fun Pantalla3() {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp)
-                .background(Color(0xFF357070)) // Fondo del recuadro
+                .height(25.dp)
+                .border(3.dp, Color(0xFF00730A))
+                .background(Color(0xFF00730A)) // Fondo del recuadro
                 .padding(8.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
             Text(
-                text = "Habilidades: Locomocion intercambiable",
+                text = "Habilidades: Plomazos, Cuchillazos, Granadazos y Fe en Cristo",
                 color = Color.White,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold,
                 fontSize = 10.sp
             )
+
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(25.dp)
+                .border(3.dp, Color(0xFF00730A))
+                .background(Color(0xFF00730A)) // Fondo del recuadro
+                .padding(8.dp),
+            contentAlignment = Alignment.TopCenter,
+        ) {
+            Text(
+                text = "Estado: Vencedores",
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp
+            )
+
         }
     }
 }
